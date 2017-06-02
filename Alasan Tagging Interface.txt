@@ -1,0 +1,15 @@
+TAGGING INTERFACE
+Tagging interface itu adalah sebuah interface yang tidak mempunyai abstrak method di body nya atau hanya berupa interface kosong. 
+mereka digunakan untuk menambah tipe data sebuah kelas yang mengimplement tagging interface tersebut agar menjadi parent interface untuk interface-interface yang lain.
+(khususnya untuk multiple inheritance di interface).
+
+Tagging interface digunakan untuk :
+1. Memberikan tanda kepada java virtual machine supaya kelas yang mengimplemen tagging interface tersebut diberikan perlakuan khusus. 
+Contoh : dengan mengimplemen serializable, jvm akan memberikan operasi - operasi tertentu bagi kelas tersebut.
+2. Memberikan keleluasaan bagi pemrogram untuk mengelompokan kelas - kelas yang dimiliki.
+Jadi, kelas - kelas yang mengimplement suatu tagging interface tertentu dapat dibedakan dari kelas lainnya.
+
+Alasan membuat tagging interface ?
+- Agar dapat mengimplement lebih dari satu interface.	
+- Memberikan petunjuk pada compiler bahwa kelas tersebut memiliki karakteristik tertentu.
+- Agar suatu interface lebih spesifik dalam fungsinya sehingga tidak membingungkan pengembang dan keterbatasan penggunaan interface. keterbatasannya adalah interface hanya bisa dilakukan di kelas kongkrit dan semua metodenya harus di override tidak bisa sebagian(sangat mungkin terjadi kasus sepert ini).
